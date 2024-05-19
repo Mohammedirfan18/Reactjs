@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout'
-import Home from './components/Home/Home'
-import About from './components/About/About'
-import Contact from './components/Contact/Contact'
-import User from './components/Users/User'
+import { About,Home,Contact,User} from './components'
 import Github, { githubInfoLoader } from './components/Github/Github'
 
 
