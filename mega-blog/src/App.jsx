@@ -5,6 +5,7 @@ import authService from './appwrite/auth';
 import {login,logout} from './store/authSlice'
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import { Outlet } from 'react-router-dom';
 function App() {
    const [loading,setLoading] = useState(true);
    const dispatch=useDispatch();
@@ -19,6 +20,9 @@ function App() {
           dispatch(logout())
         }
     })
+    .catch((error)=>{
+      console.log("Error fetching user data:", error);
+    })
     .finally(()=>setLoading(false))
    },[])
 
@@ -26,7 +30,7 @@ function App() {
     <div className='min-h-screen bg-gray-400 flex flex-wrap content-between '>
       <div className='w-full-block'>
         <Header/>
-    TODO:{/*Outlet*/}
+   <Outlet/>
         <Footer/>
       </div>
     </div>

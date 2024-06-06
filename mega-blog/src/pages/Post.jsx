@@ -58,8 +58,11 @@ export default function Post() {
                 <div className="w-full mb-6">
                     <h1 className="text-2xl font-bold">{post.title}</h1>
                 </div>
+                <div className="browser-css text-gray-700">
                 <div className="browser-css">
                     {parse(post.content)}
+                    </div>
+                    <div className='mt-5 font-semibold'><span className='text-violet-700'>Created By</span>: &nbsp; {post.userName}</div>
                     </div>
             </Container>
         </div>
